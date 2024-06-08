@@ -14,3 +14,4 @@ phpunit.xml
 psalm.xml
 testbench.yaml
 phpstan.neon
+coverage.xml

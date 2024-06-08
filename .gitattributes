@@ -17,3 +17,4 @@ phpunit.xml.dist         export-ignore
 /.editorconfig           export-ignore
 docker-compose.yml       export-ignore
 Dockerfile               export-ignore
+coverage.xml             export-ignore
