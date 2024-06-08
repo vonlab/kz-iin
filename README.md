@@ -1,8 +1,17 @@
 # KzIIN Library
 
-[![Latest Version](https://img.shields.io/packagist/v/vonlab/kz-iin.svg?style=flat-square)](https://packagist.org/packages/vonlab/kz-iin)
+[![Latest Stable Version](https://poser.pugx.org/vonlab/kz-iin/v/stable)](https://packagist.org/packages/vonlab/kz-iin)
+[![License](https://poser.pugx.org/vonlab/kz-iin/license)](https://packagist.org/packages/vonlab/kz-iin)
 
 This library provides tools for validating, parsing, and generating Kazakhstan Individual Identification Numbers (IIN).
+
+## About Kazakhstan IIN
+
+In Kazakhstan, the Individual Identification Number (IIN) is a unique identifier assigned to individuals. 
+The IIN is composed of 12 digits, where each digit represents specific information about the individual, 
+such as the date of birth, gender, and a unique identifier for individuals born on the same date. 
+More detailed information about the structure and purpose of the IIN can be found 
+[here](https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BD%D0%BE%D0%BC%D0%B5%D1%80).
 
 ## Features
 
