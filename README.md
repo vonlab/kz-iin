@@ -2,6 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/vonlab/kz-iin/v/stable)](https://packagist.org/packages/vonlab/kz-iin)
 [![License](https://poser.pugx.org/vonlab/kz-iin/license)](https://packagist.org/packages/vonlab/kz-iin)
+[![PHP Version Require](http://poser.pugx.org/vonlab/kz-iin/require/php)](https://packagist.org/packages/vonlab/kz-iin)
 [![Coverage Status](https://coveralls.io/repos/github/vonlab/kz-iin/badge.svg?branch=main)](https://coveralls.io/github/vonlab/kz-iin?branch=main)
 
 This library provides tools for validating, parsing, and generating Kazakhstan Individual Identification Numbers (IIN).
