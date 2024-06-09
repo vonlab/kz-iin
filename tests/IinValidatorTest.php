@@ -127,4 +127,18 @@ class IinValidatorTest extends TestCase
     {
         $this->assertFalse($this->validator->isValid('990101300000'));
     }
+
+    /**
+     * @return void
+     */
+    public function testGetError()
+    {
+        $invalidIin = '12345';
+        $result = $this->validator->isValid($invalidIin);
+
+        $this->assertFalse($result);
+
+        $lastError = $this->validator->getError();
+        $this->assertSame((new InvalidIinLengthException())->getMessage(), $lastError);
+    }
 }

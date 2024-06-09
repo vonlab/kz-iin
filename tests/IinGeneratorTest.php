@@ -6,6 +6,8 @@ namespace VonLab\KzIin\Tests;
 
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
+use ReflectionException;
 use VonLab\KzIin\Data\BirthDate;
 use VonLab\KzIin\Enums\GenderEnum;
 use VonLab\KzIin\Exceptions\InvalidIinFormatException;
@@ -75,5 +77,44 @@ class IinGeneratorTest extends TestCase
         $this->assertEquals('01', substr($iin, 2, 2));
         $this->assertEquals('01', substr($iin, 4, 2));
         $this->assertSame('3', $iin[6]);
+    }
+
+    /**
+     * @throws ReflectionException
+     * @return void
+     */
+    public function testGenerateRandomBirthDate()
+    {
+        $generator = new IinGenerator();
+
+        $reflection = new ReflectionClass($generator);
+        $method = $reflection->getMethod('generateRandomBirthDate');
+
+        $birthDate = $method->invoke($generator);
+
+        $this->assertInstanceOf(BirthDate::class, $birthDate);
+
+        $currentYear = (int)date('Y');
+        $birthYear = $birthDate->year;
+
+        $this->assertGreaterThanOrEqual($currentYear - 60, $birthYear);
+        $this->assertLessThanOrEqual($currentYear - 18, $birthYear);
+    }
+
+    /**
+     * @throws ReflectionException
+     * @return void
+     */
+    public function testGenerateRandomGender()
+    {
+        $generator = new IinGenerator();
+
+        $reflection = new ReflectionClass($generator);
+        $method = $reflection->getMethod('generateRandomGender');
+
+        $gender = $method->invoke($generator);
+
+        $this->assertInstanceOf(GenderEnum::class, $gender);
+        $this->assertContains($gender, [GenderEnum::Male, GenderEnum::Female]);
     }
 }
