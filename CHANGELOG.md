@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.0.5 - 2024-06-09
+
+### What's Changed
+
+- test: add tests for IinGenerator and IinValidator
+
+**Full Changelog**: https://github.com/vonlab/kz-iin/compare/v1.0.4...v1.0.5
+
 ## v1.0.4 - 2024-06-09
 
 ### What's Changed
